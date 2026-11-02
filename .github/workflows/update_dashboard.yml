@@ -2,12 +2,11 @@ name: Update ETF Dashboard
 
 on:
   schedule:
-    - cron: '0 18 * * 1-5' # Runs every weekday at 6:00 PM UTC (after market close)
-  workflow_dispatch: # Allows you to trigger it manually anytime from GitHub mobile app or web
+    - cron: '0 18 * * 1-5'
+  workflow_dispatch:
 
 jobs:
   build:
-  name: Build and Deploy Dashboard
     runs-on: ubuntu-latest
     permissions:
       contents: write
